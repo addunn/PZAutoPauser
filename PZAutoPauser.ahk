@@ -3,11 +3,11 @@ MsgBox, PZAutoPauser, PZAutoPauser watches the "Project Zomboid" window. If the 
 
 if WinExist("Project Zomboid") and !WinActive("Project Zomboid")
 {
-	MsgBox, 4, PZAutoPauser, Looks like you already have Project Zomboid running. Would you like to focus/activate the window?`n`nClicking YES will focus/activate the "Project Zomboid" window. The script will then start watching the window.`n`nClicking NO will exit PZAutoPauser.
-	IfMsgBox Yes
-		WinActivate, Project Zomboid
-	else
-		ExitApp
+    MsgBox, 4, PZAutoPauser, Looks like you already have Project Zomboid running. Would you like to focus/activate the window?`n`nClicking YES will focus/activate the "Project Zomboid" window. The script will then start watching the window.`n`nClicking NO will exit PZAutoPauser.
+    IfMsgBox Yes
+        WinActivate, Project Zomboid
+    else
+        ExitApp
 }
 
 SetTimer, WatchActiveWindow, 200
@@ -18,14 +18,14 @@ WatchActiveWindow:
 
 if WinExist("Project Zomboid") and !WinActive("Project Zomboid")
 {
-	SetKeyDelay, 100, 100
-	ControlSend,, {F2}, Project Zomboid
-	ControlSend,, {Esc}, Project Zomboid
+    SetKeyDelay, 100, 100
+    ControlSend,, {F2}, Project Zomboid
+    ControlSend,, {Esc}, Project Zomboid
     MsgBox, 4, PZAutoPauser, PZAutoPauser Triggered!`n`nWould you like to resume the game?`n`nClicking YES will focus/activate the "Project Zomboid" window. The script will continue watching the window.`n`nClicking NO will exit PZAutoPauser.
-	IfMsgBox Yes
-		WinActivate, Project Zomboid
-	else
-		ExitApp
+    IfMsgBox Yes
+        WinActivate, Project Zomboid
+    else
+        ExitApp
 }
 
 return
