@@ -20,16 +20,16 @@
     {
         SetKeyDelay, 150, 150
         ControlSend,, {F2}, Project Zomboid
-		Sleep 100
+        Sleep 100
         ControlSend,, {Esc}, Project Zomboid
-		Sleep 100
-		ControlSend,, {F2}, Project Zomboid
+        Sleep 100
+        ControlSend,, {F2}, Project Zomboid
         MsgBox, 4, PZAutoPauser, PZAutoPauser Triggered!`n`nWould you like to resume the game?`n`nClicking YES will focus/activate the "Project Zomboid" window. The script will continue watching the window.`n`nClicking NO will exit PZAutoPauser.
         IfMsgBox Yes
             WinActivate, Project Zomboid
         else
             ExitApp
-		Sleep 500
+        Sleep 500
     }
 
     return
